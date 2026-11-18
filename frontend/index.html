@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Assistant — AI Career &amp; Interview Coach</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <header class="header">
+        <div class="brand">
+            <div class="brand-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+            </div>
+            <div class="brand-text">
+                <h1>Placement Assistant</h1>
+                <p class="subtitle">AI Technical &amp; Career Interview Coach</p>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <span class="status-badge" title="Assistant ready">
+                <span class="status-dot"></span>
+                Online
+            </span>
+            <button id="clear-btn" type="button" title="Start a new conversation">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 5v14M5 12h14"/>
+                </svg>
+                <span>New Chat</span>
+            </button>
+        </div>
+    </header>
+
+    <main id="chat-box" aria-live="polite"></main>
+
+    <footer class="input-wrapper">
+        <div class="input-area">
+            <input
+                id="query"
+                type="text"
+                placeholder="Ask about DSA, CS fundamentals, resumes, or interview prep..."
+                autocomplete="off"
+                aria-label="Ask a placement question"
+            >
+            <button id="send-btn" type="button" onclick="sendMessage()">
+                <span class="btn-label">Send</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="22" y1="2" x2="11" y2="13"/>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+            </button>
+        </div>
+        <p class="input-hint">Dedicated to placement preparation &bull; Press <kbd>Enter</kbd> to send</p>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
